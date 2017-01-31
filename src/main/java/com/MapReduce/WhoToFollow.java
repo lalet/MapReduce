@@ -54,6 +54,8 @@ public static class AllPairsMapper extends Mapper<Object,Text,IntWritable,IntWri
 	}
 }
 
+//PairsReducer is used for creating the key values pair so that the negative values are carried forward to the next map
+//and hence to remove the already following accounts from being suggested again.
 public static class PairsReducer extends Reducer<IntWritable,IntWritable,IntWritable,Text>{
 	public void reduce(IntWritable key,Iterable<IntWritable> values,Context context) throws IOException,InterruptedException{
 		IntWritable user=key;
