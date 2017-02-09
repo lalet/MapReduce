@@ -41,8 +41,11 @@ This code is built on compiler version : **Java 1.8**
 ----
 
 ### Running in hadoop
-1. Copy the input file to the hdfs file system
-2. Export the project as a jar with all the necessary libararies
+1. Copy the input file to the hdfs file system    
+2. Export the project as a runnable jar.    
+   * Don't forget to include the right configuration    
+   * Make sure option - Include all the libraries packaged in the jar is selected.    
+    ![alt text](https://cloud.githubusercontent.com/assets/4597920/22808208/c322facc-eef8-11e6-92a4-9b7b75602e0d.png)
 3. Run the commmand : hadoop jar [name of the jar file] [input file path] [output folder path]     
    Sample:     
    > hadoop jar whotofollow.jar input.txt output_wtf
