@@ -63,6 +63,7 @@ public static class PairsReducer extends Reducer<IntWritable,IntWritable,IntWrit
 	public void reduce(IntWritable key,Iterable<IntWritable> values,Context context) throws IOException,InterruptedException{
 		IntWritable user=key;
 		StringBuffer sb = new StringBuffer("");
+		//Going through each value in the list of values and appending it as a string
 		 while (values.iterator().hasNext()) {
 	            Integer value = values.iterator().next().get();
 	                // Using a StringBuffer is more efficient than concatenating strings
@@ -89,7 +90,8 @@ public static class AllPairsMapperWithFilter extends Mapper<Object,Text,IntWrita
         ArrayList<Integer> userFollows = new ArrayList<Integer>();
         //IntWritable form of the userAccount which the user follows
         IntWritable userFollowsAccount = new IntWritable();
-        //To identify the accounts the user is already following, we emit out the pairs as negative integers.
+       //If the value is less than zero, the user is already following those
+        //accounts and we emit them as negative values to keep track of already followed accounts by a particular user. 
        while(st.hasMoreTokens()){
         	Integer userFollowsAccountId = Integer.parseInt(st.nextToken());
         	if (userFollowsAccountId < 0){
@@ -102,6 +104,7 @@ public static class AllPairsMapperWithFilter extends Mapper<Object,Text,IntWrita
         	
         }
         
+        //
         ArrayList<Integer> seenAccountIds = new ArrayList<Integer>();
         IntWritable userFollowsAccount2 = new IntWritable();
         for (Integer accountId:userFollows){
