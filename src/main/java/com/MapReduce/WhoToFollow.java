@@ -177,10 +177,11 @@ public static class CountReducer extends Reducer<IntWritable, IntWritable, IntWr
 		StringTokenizer st=new StringTokenizer(values.toString());
 		// 'alreadyFollowing' will store the accounts which the  'user' is already following
         // (the negative values in 'values').
-        ArrayList<Integer> alreadyFollowingList = new ArrayList<Integer>();
 		//alreadyFollowing will hold the negative values list.
-        ArrayList<Integer> suggestedAccountsList = new ArrayList<Integer>();
+        ArrayList<Integer> alreadyFollowingList = new ArrayList<Integer>();
         //suggestedAccountsList will hold the account ids the user can follow
+        ArrayList<Integer> suggestedAccountsList = new ArrayList<Integer>();
+       
         
         while (values.iterator().hasNext()) {
             Integer value = values.iterator().next().get();
