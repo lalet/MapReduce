@@ -45,4 +45,4 @@ This code is built on compiler version : **Java 1.8**
 2. Export the project as a jar with all the necessary libararies
 3. Run the commmand : hadoop jar [name of the jar file] [input file path] [output folder path]     
    Sample:     
-   > hadoop jar whotofollow1.jar com/MapReduce/WhoToFollow input.txt output_wtf
+   > hadoop jar whotofollow.jar input.txt output_wtf
