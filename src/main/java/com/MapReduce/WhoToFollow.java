@@ -104,7 +104,8 @@ public static class AllPairsMapperWithFilter extends Mapper<Object,Text,IntWrita
         	
         }
         
-        //
+        //for each inverted list X, [ Y1, Y2, ..., Yk ] , 
+        //mapper emits all pairs (Yi,Yj) and (Yj,Yi) where i belongs to [1,k] , j belongs to [i,k]
         ArrayList<Integer> seenAccountIds = new ArrayList<Integer>();
         IntWritable userFollowsAccount2 = new IntWritable();
         for (Integer accountId:userFollows){
