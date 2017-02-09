@@ -33,8 +33,16 @@ This code is built on compiler version : **Java 1.8**
 1. Clone the repo [Who To Follow Repo](https://github.com/lalet/MapReduce.git "Who To Follow")
 2. Import the cloned repo as a Maven Project [Tutorial](http://javapapers.com/java/import-maven-project-into-eclipse/)
 3. Open the project,    
-        1. Run Configuration
+        1. Run Configuration    
 	![alt text](https://cloud.githubusercontent.com/assets/4597920/22804409/f9d90d98-eee6-11e6-903d-6ea7ef2af13d.png)
      
-	2.Add Arguments and run.
+	2.Add Arguments and run.    
 	![alt text](https://cloud.githubusercontent.com/assets/4597920/22804388/dff76a32-eee6-11e6-98cc-a33bdd43d84b.png)
+----
+
+### Running in hadoop
+1. Copy the input file to the hdfs file system
+2. Export the project as a jar with all the necessary libararies
+3. Run the commmand : hadoop jar [name of the jar file] [input file path] [output folder path] 
+   Sample:
+   > hadoop jar whotofollow1.jar com/MapReduce/WhoToFollow input.txt output_wtf
