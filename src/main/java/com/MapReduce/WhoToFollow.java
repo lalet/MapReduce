@@ -192,6 +192,9 @@ public static class CountReducer extends Reducer<IntWritable, IntWritable, IntWr
             }
         }
         
+        //Predicate used below removes all the values from suggested accounts list
+        // if the corresponding negative value is appearing in alreadyFollows list.
+        //This is in order to avoid already following accounts being suggested again.
         for (Integer alreadyFollowsAccount:alreadyFollowingList){
         	suggestedAccountsList.removeIf(new Predicate<Integer>(){
         		@Override
@@ -220,17 +223,16 @@ public static class CountReducer extends Reducer<IntWritable, IntWritable, IntWr
         	}
         });
         
-     // Builds the output string that will be emitted
-        StringBuffer sb = new StringBuffer(""); // Using a StringBuffer is more efficient than concatenating strings
+        // Builds the output string that will be emitted
+        // The top ten accounts according to the number of common followers will be suggested for each user
+        StringBuffer sb = new StringBuffer("");
         for (int i = 0; i < recommendations.size() && i < 10; i++) {
             Recommendation recommendedAccount = recommendations.get(i);
             sb.append(recommendedAccount.toString() + " ");
         }
         Text result = new Text(sb.toString());
         context.write(user, result);    
-        
-        
-        
+               
 	}
 }
 
