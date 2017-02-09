@@ -16,8 +16,8 @@ X F1 F2 .. where Fi are followed by user X. For instance:
 * Output: A File containing n lines in the following format:
 X R1(n1) R2(n2) R3(n3) ...
 where Ri are the ids of the people recommended to user X and ni is the number of followed
-people in common between X and Ri. Recommended people Ri *must not be* followed by X
-and *must* be ordered by decreasing values of ni. On the previous example:
+people in common between X and Ri. Recommended people Ri **must not be** followed by X
+and **must** be ordered by decreasing values of ni. On the previous example:
 
 >1 2(2)   
 >2 4(3)   
@@ -28,8 +28,9 @@ and *must* be ordered by decreasing values of ni. On the previous example:
 
 ## How to run the program
 
-This code is built on compiler version : *Java 8*
+This code is built on compiler version : **Java 1.8**
 
 1. Clone the repo [Who To Follow Repo](https://github.com/lalet/MapReduce.git "Who To Follow")
-2. Import the project as a Maven Project [Tutorial](http://javapapers.com/java/import-maven-project-into-eclipse/)
-3.    
+2. Import the cloned repo as a Maven Project [Tutorial](http://javapapers.com/java/import-maven-project-into-eclipse/)
+3. Open the project,    
+        * Run Configuration, add arguments input.text <output folder name> , run.
