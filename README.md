@@ -43,6 +43,6 @@ This code is built on compiler version : **Java 1.8**
 ### Running in hadoop
 1. Copy the input file to the hdfs file system
 2. Export the project as a jar with all the necessary libararies
-3. Run the commmand : hadoop jar [name of the jar file] [input file path] [output folder path] 
-   Sample:
+3. Run the commmand : hadoop jar [name of the jar file] [input file path] [output folder path]     
+   Sample:     
    > hadoop jar whotofollow1.jar com/MapReduce/WhoToFollow input.txt output_wtf
