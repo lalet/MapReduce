@@ -34,7 +34,7 @@ This code is built on compiler version : **Java 1.8**
 2. Import the cloned repo as a Maven Project [Tutorial](http://javapapers.com/java/import-maven-project-into-eclipse/)
 3. Open the project,    
         1. Run Configuration
-	![alt text](https://cloud.githubusercontent.com/assets/4597920/22804409/f9d90d98-eee6-11e6-903d-6ea7ef2af13d.png | height=100)
+	![alt text](https://cloud.githubusercontent.com/assets/4597920/22804409/f9d90d98-eee6-11e6-903d-6ea7ef2af13d.png)
      
 	2.Add Arguments and run.
-	![alt text](https://cloud.githubusercontent.com/assets/4597920/22804388/dff76a32-eee6-11e6-98cc-a33bdd43d84b.png | height=100)
+	![alt text](https://cloud.githubusercontent.com/assets/4597920/22804388/dff76a32-eee6-11e6-98cc-a33bdd43d84b.png)
