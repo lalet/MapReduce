@@ -1,2 +1,1 @@
-# MapReduce
-Hadoop
+# MapReduce - Who To Follow
