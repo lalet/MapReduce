@@ -23,4 +23,13 @@ and *must* be ordered by decreasing values of ni. On the previous example:
 >2 4(3)   
 >3    
 >4    
->5 2(1) 1(1) 4(1)    
+>5 2(1) 1(1) 4(1) 
+
+
+## How to run the program
+
+This code is built on compiler version : *Java 8*
+
+1. Clone the repo [Who To Follow Repo](https://github.com/lalet/MapReduce.git "Who To Follow")
+2. Import the project as a Maven Project [Tutorial](http://javapapers.com/java/import-maven-project-into-eclipse/)
+3.    
