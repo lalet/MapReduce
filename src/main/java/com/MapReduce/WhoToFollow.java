@@ -45,8 +45,8 @@ public static class AllPairsMapper extends Mapper<Object,Text,IntWritable,IntWri
 		//IntWritable context for the account which the user follows
 		IntWritable userFollowsAccount = new IntWritable();
 		// First, go through the list of all the users the 'user' is following and emit
-    // (user,-userFollowsAccount)
-    // 'userFollowsAccount' will be used in the emitted pair
+       // (user,-userFollowsAccount) to keep track of the accounts which the user already follows.
+       // 'userFollowsAccount' will be used in the emitted pair
 		while(st.hasMoreTokens()){
 		      Integer account=Integer.parseInt(st.nextToken());
 			  userFollowsAccount.set(account);
