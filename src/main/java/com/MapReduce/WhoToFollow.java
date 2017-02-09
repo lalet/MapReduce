@@ -129,7 +129,9 @@ Reducer
 *********/
 public static class CountReducer extends Reducer<IntWritable, IntWritable, IntWritable, Text>{
 	
-	
+	//Recommendation class has all the methods to add the number of common accounts
+	//Find if the accounts are already existing in the recommendations list, convert the values to 
+	//to string etc.
 	private static class Recommendation{
 		//Attributes
 		private Integer accountId;
