@@ -48,8 +48,8 @@ This code is built on compiler version : **Java 1.8**
     ![alt text](https://cloud.githubusercontent.com/assets/4597920/22808208/c322facc-eef8-11e6-92a4-9b7b75602e0d.png)
 3. Run the commmand : hadoop jar [name of the jar file] [input file path] [output folder path]    
 Sample:             
-> hadoop jar whotofollow.jar input.txt output_who_to_follow
-4.To view the results do 
+> hadoop jar whotofollow.jar input.txt output_who_to_follow     
+4.To view the results do:     
 > hdfs dfs -cat [output directory name]/*
 
 ##### After each run in hadoop hdfs, please remove the folder named as "intermediate" since it gets created everytime you run the whotofollow jar. Also make sure that the folder name given to the output directory does not exist in the hdfs.
