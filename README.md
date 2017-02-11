@@ -55,7 +55,7 @@ Sample:
 4.To view the results do:     
 > hdfs dfs -cat [output directory name]/*
 
-### Compiling the code without eclispe.
+### Compiling the code without Eclipse.
 
 **Make sure that maven plugin is installted in the system**
 
