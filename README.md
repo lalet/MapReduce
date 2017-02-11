@@ -61,9 +61,9 @@ Sample:
 
 1. Go the the project directory containing the pom.xml file    
 2. Run the command     
->>mvn package  
+>> mvn package  
 3. Verify if a jar file named MapReduce-0.0.1-SNAPSHOT.jar is created inside the folder named **target**        
 4. RUN using the command  
->>hadoop jar path to the MapReduce-0.0.1-SNAPSHOT.jar file input path output path   
+>> hadoop jar (path to the MapReduce-0.0.1-SNAPSHOT.jar file) (input file path) (output file path)    
 
 ##### After each run in hadoop hdfs, please remove the folder named as "intermediate" since it gets created everytime you run the whotofollow jar. Also make sure that the folder name given to the output directory does not exist in the hdfs.
