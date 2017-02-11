@@ -36,6 +36,13 @@ public class WhoToFollow{
 	Mapper  
 
 	*********/
+	
+	
+//AllPairsMapper emits key values pairs
+//One with user and already following accounts with negative value
+//Eg : (3, -2)
+//Another set of pairs with following account id as the key and the the user account id as the value.
+//Eg: (2, 3)
 public static class AllPairsMapper extends Mapper<Object,Text,IntWritable,IntWritable>{
 	public void map(Object key,Text values,Context context) throws IOException,InterruptedException{
 		//Convert the string to tokens
