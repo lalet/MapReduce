@@ -28,7 +28,7 @@ and **must** be ordered by decreasing values of ni. On the previous example:
 
 ## How to run the program
 
-This code is built on compiler version : **Java 1.8**
+Map Reduce code is built on compiler version : **Java 1.8** and using **Maven** plugin.
 
 1. Clone the repo [Who To Follow Repo](https://github.com/lalet/MapReduce.git "Who To Follow")
 2. Import the cloned repo as a Maven Project [Tutorial](http://javapapers.com/java/import-maven-project-into-eclipse/)
@@ -54,5 +54,16 @@ Sample:
 
 4.To view the results do:     
 > hdfs dfs -cat [output directory name]/*
+
+### Compiling the code without eclispe.
+
+**Make sure that maven plugin is installted in the system**
+
+1. Go the the project directory containing the pom.xml file    
+2. Run the command    
+>mvn package
+3. Verify if a jar file named MapReduce-0.0.1-SNAPSHOT.jar is created inside the folder named **target**       
+4. RUN using the command    
+> hadoop jar <path to the MapReduce-0.0.1-SNAPSHOT.jar file> <input path> <output path> 
 
 ##### After each run in hadoop hdfs, please remove the folder named as "intermediate" since it gets created everytime you run the whotofollow jar. Also make sure that the folder name given to the output directory does not exist in the hdfs.
