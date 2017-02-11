@@ -57,7 +57,7 @@ Sample:
 
 ### Compiling the code without Eclipse.
 
-**Make sure that maven plugin is installted in the system**
+**Make sure that maven plugin is installed in the system**
 
 1. Go the the project directory containing the pom.xml file  
 2. Run the command  
