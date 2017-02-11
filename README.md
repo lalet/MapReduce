@@ -48,7 +48,7 @@ Map Reduce code is built on compiler version : **Java 1.8** and using **Maven** 
    * Make sure option - **Package required libraries into generated jar** is selected.    
     ![alt text](https://cloud.githubusercontent.com/assets/4597920/22808208/c322facc-eef8-11e6-92a4-9b7b75602e0d.png)
 
-3. Run the commmand : hadoop jar [name of the jar file] [input file path] [output folder path]    
+3. Run the commmand : hadoop jar name of the jar file input file path output folder path    
 Sample:             
 > hadoop jar whotofollow.jar input.txt output_who_to_follow     
 
@@ -61,9 +61,9 @@ Sample:
 
 1. Go the the project directory containing the pom.xml file    
 2. Run the command     
->mvn package  
+>>mvn package  
 3. Verify if a jar file named MapReduce-0.0.1-SNAPSHOT.jar is created inside the folder named **target**        
 4. RUN using the command  
->hadoop jar [path to the MapReduce-0.0.1-SNAPSHOT.jar file] [input path] [output path]   
+>>hadoop jar path to the MapReduce-0.0.1-SNAPSHOT.jar file input path output path   
 
 ##### After each run in hadoop hdfs, please remove the folder named as "intermediate" since it gets created everytime you run the whotofollow jar. Also make sure that the folder name given to the output directory does not exist in the hdfs.
