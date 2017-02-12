@@ -88,6 +88,9 @@ accounts by an user
 
 *********/
 
+//AllPairsMapperWithFilter is used for generating key, value pairs
+//If the value of among the list of values is < 0, it is emitted with key as well as the negative value.
+// Other values are emitted as pairs (Yi,Yj) and (Yj,Yi) where i belongs to [1,k] , j belongs to [i,k]
 public static class AllPairsMapperWithFilter extends Mapper<Object,Text,IntWritable,IntWritable>{
 	
 	public void map(Object key,Text values,Context context) throws IOException,InterruptedException{
@@ -134,6 +137,9 @@ public static class AllPairsMapperWithFilter extends Mapper<Object,Text,IntWrita
 Reducer
 
 *********/
+
+//CountReducer removes the already following accounts and sorts the recommended accounts on 
+//the basis of the number of common accounts. 
 public static class CountReducer extends Reducer<IntWritable, IntWritable, IntWritable, Text>{
 	
 	//Recommendation class has all the methods to add the number of common accounts
